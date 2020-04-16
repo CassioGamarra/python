@@ -1,5 +1,6 @@
 numero = 42
 rodadas = 0
+pontuacao = 1000
 
 dificuldade = int(input("Dificuldade: 1 - Nível 1 | 2 - Nível 2 | 3 - Nível 3: "))
 
@@ -27,6 +28,9 @@ for rodada in range(1,rodadas+1):
         break
     elif(maior):
         print("Chute maior que o número")
+        pontuacao -= abs(chute-numero)
     elif(menor):
         print("Chute menor que o número")
-print("Fim de jogo!")
+        pontuacao -= abs(chute-numero)
+        
+print("Fim de jogo! Você fez {} pontos".format(pontuacao))
