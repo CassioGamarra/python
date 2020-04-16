@@ -2,6 +2,10 @@ numero = 42
 rodadas = 0
 pontuacao = 1000
 
+print("*********************")
+print("*JOGO DA ADIVINHAÇÃO*")
+print("*********************\n")
+
 dificuldade = int(input("Dificuldade: 1 - Nível 1 | 2 - Nível 2 | 3 - Nível 3: "))
 
 if(dificuldade == 1):
@@ -32,5 +36,5 @@ for rodada in range(1,rodadas+1):
     elif(menor):
         print("Chute menor que o número")
         pontuacao -= abs(chute-numero)
-        
+
 print("Fim de jogo! Você fez {} pontos".format(pontuacao))
